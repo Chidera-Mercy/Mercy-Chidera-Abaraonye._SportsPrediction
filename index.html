@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA Player Overall Score Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>FIFA Player Rating Prediction</h1>
+        <form id="prediction-form">
+            <div class="section">
+                <label for="potential">Potential</label>
+                <input type="number" id="potential" name="potential" required>
+            </div>
+            <div class="section">
+                <label for="value_eur">Value (€)</label>
+                <input type="number" id="value_eur" name="value_eur" required>
+            </div>
+            <div class="section">
+                <label for="wage_eur">Wage (€)</label>
+                <input type="number" id="wage_eur" name="wage_eur" required>
+            </div>
+            <div class="section">
+                <label for="passing">Passing</label>
+                <input type="number" id="passing" name="passing" required>
+            </div>
+            <div class="section">
+                <label for="dribbling">Dribbling</label>
+                <input type="number" id="dribbling" name="dribbling" required>
+            </div>
+            <div class="section">
+                <label for="physic">Physic</label>
+                <input type="number" id="physic" name="physic" required>
+            </div>
+            <div class="section">
+                <label for="movement_reactions">Movement Reactions</label>
+                <input type="number" id="movement_reactions" name="movement_reactions" required>
+            </div>
+            <div class="section">
+                <label for="mentality_composure">Mentality Composure</label>
+                <input type="number" id="mentality_composure" name="mentality_composure" required>
+            </div>
+            <button type="submit">Predict Overall Rating</button>
+        </form>
+        <div id="result">
+            <h3>Prediction Result</h3>
+            <p id="prediction"></p>
+            <p id="confidence"></p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
